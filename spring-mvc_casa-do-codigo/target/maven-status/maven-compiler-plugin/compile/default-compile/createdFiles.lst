@@ -1,5 +1,6 @@
 br\com\casadocodigo\daos\ProductDAO.class
 br\com\casadocodigo\controllers\HomeController.class
+br\com\casadocodigo\conf\JPAConfiguration.class
 br\com\casadocodigo\conf\ServletSpringMVC.class
 br\com\casadocodigo\models\Product.class
 br\com\casadocodigo\conf\AppWebConfiguration.class
