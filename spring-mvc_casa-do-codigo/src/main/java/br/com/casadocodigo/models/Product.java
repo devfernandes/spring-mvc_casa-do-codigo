@@ -1,10 +1,20 @@
 package br.com.casadocodigo.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+
+@Entity
 public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String title;
+	@Lob
 	private String description;
-	private int pages;
+	private Integer pages;
 
 	public Integer getId() {
 		return id;
@@ -30,11 +40,11 @@ public class Product {
 		this.description = description;
 	}
 
-	public int getPages() {
+	public Integer getPages() {
 		return pages;
 	}
 
-	public void setPages(int pages) {
+	public void setPages(Integer pages) {
 		this.pages = pages;
 	}
 	
