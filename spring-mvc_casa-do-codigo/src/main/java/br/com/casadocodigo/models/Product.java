@@ -1,5 +1,9 @@
 package br.com.casadocodigo.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +19,9 @@ public class Product {
 	@Lob
 	private String description;
 	private Integer pages;
+
+	@ElementCollection
+	private List<Price> prices = new ArrayList<>();
 
 	public Integer getId() {
 		return id;
@@ -47,12 +54,19 @@ public class Product {
 	public void setPages(Integer pages) {
 		this.pages = pages;
 	}
-	
+
+	public List<Price> getPrices() {
+		return prices;
+	}
+
+	public void setPrices(List<Price> prices) {
+		this.prices = prices;
+	}
+
 	@Override
 	public String toString() {
-		return "ID: " + id +
-				"\nTitle: " + title +
-				"\nDescription: " + description + 
-				"\nPages: " + pages;
+		return "ID: " + id + "\nTitle: " + title + "\nDescription: " + description + "\nPages: " + pages.toString()
+				+ "\nValor EBOOK: " + this.getPrices().get(0).getValue() + "\nValor EBOOK: "
+				+ this.getPrices().get(1).getValue() + "\nValor COMBO: " + this.getPrices().get(2).getValue();
 	}
 }
