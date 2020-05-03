@@ -1,6 +1,9 @@
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\controllers\ProductController.java
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\conf\AppWebConfiguration.java
+C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\models\Price.java
+C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\validation\ProductValidator.java
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\conf\JPAConfiguration.java
+C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\models\enums\BookType.java
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\conf\ServletSpringMVC.java
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\controllers\HomeController.java
 C:\Users\rafaelcarvalho\Desktop\Pessoal\Spring\projects\casa-do-codigo\spring-mvc_casa-do-codigo\src\main\java\br\com\casadocodigo\daos\ProductDAO.java
