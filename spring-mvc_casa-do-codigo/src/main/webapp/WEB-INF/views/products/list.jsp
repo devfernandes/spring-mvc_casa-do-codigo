@@ -13,6 +13,7 @@
 		<script src="../../../resources/bootstrap/js/bootstrap.js"></script>
 	</head>
 	<body>
+		<div class="container">
 		<table class="table">
 			<thead>
 				<tr>
@@ -33,5 +34,6 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		</div>
 	</body>
 </html>

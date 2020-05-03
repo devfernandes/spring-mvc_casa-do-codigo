@@ -15,37 +15,39 @@
 		<script src="../../../resources/bootstrap/js/bootstrap.js"></script>
 	</head>
 	<body>
+		<div class="container">
 			<form:form method="POST" action="${spring:mvcUrl('PC#save').build()}" commandName="product">
 				<div class="form-group">
 					<label for="title">Titulo</label>
-					<input type="text" name="title" id="title" class="form-control">
+					<form:input path="title" class="form-control"/>				
 					<form:errors path="title"/>
 				</div>
 				
 				<div class="form-group">
 					<label for="description">Descrição</label>
-					<textarea rows="3" name="description" id="description" class="form-control"></textarea>
+					<form:textarea path="description" rows="3" id="description" class="form-control"/>
 					<form:errors path="description"/>
 				</div>
 	
 				<div class="form-group">
 					<label for="pages">Número de paginas</label> 
-					<input type="text" name="pages" id="pages" class="form-control"/>
+					<form:input path="pages" class="form-control" />
 				</div>
 				
 				<div class="form-row">
 					<c:forEach items="${bookTypes}" var="bookType" varStatus="status">
 						<div class="col">
 							<label for="price_${bookType}">${bookType}</label>
-							<input class="form-control" type="text" name="prices[${status.index}].value" id="price_${bookType}"/>
-							<input type="hidden" name="prices[${status.index}].bookType" value="${bookType}"/>
+							<form:input path="prices[${status.index}].value" id="price_${bookType}" class="form-control" />
+							<form:input path="prices[${status.index}].bookType" type="hidden" value="${bookType}" />
 						</div>
 					</c:forEach>
 				</div>
 				
 				<div>
-					<input type="submit" value="Enviar" class="btn btn-primary">
+					<input type="submit" value="Enviar" class="btn btn-primary mt-2">
 				</div>
-			</form:form>	
+			</form:form>
+		</div>
 	</body>
 </html>
