@@ -4,24 +4,34 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html;	charset=UTF-8">
-	<title>Insert title here</title>
+	<title>Lista de produtos</title>
+	<style type="text/css">
+		    <%@include file="../../../resources/bootstrap/css/bootstrap.min.css" %>
+		    <%@include file="../../../resources/css/product.css" %>
+		</style>
+		<script src="../../../resources/bootstrap/js/jquery.js"></script>
+		<script src="../../../resources/bootstrap/js/bootstrap.js"></script>
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td>Titulo</td>
-				<td>Valores</td>
-			</tr>
-			<c:forEach items="${products}" var="product">
+		<table class="table">
+			<thead>
 				<tr>
-					<td>${product.title}</td>
-					<td>
-						<c:forEach items="${product.prices}" var="price">
-							[${price.value} - ${price.bookType}]
-						</c:forEach>
-					</td>
+					<th scope="col">Titulo</th>
+					<th scope="col">Valores</th>
 				</tr>
-			</c:forEach>
+			</thead>
+			<tbody>
+				<c:forEach items="${products}" var="product">
+					<tr>
+						<th scope="row">${product.title}</th>					
+						<td>	
+							<c:forEach items="${product.prices}" var="price">					
+								[${price.value} - ${price.bookType}]
+							</c:forEach>
+						</td>						
+					</tr>
+				</c:forEach>
+			</tbody>
 		</table>
 	</body>
 </html>
